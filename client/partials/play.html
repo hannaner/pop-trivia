@@ -1,0 +1,21 @@
+<div>
+	<p>Hi {{current_user}}!</p>
+	<p>Choose an answer for each of the questions and submit the test once done.</p>
+	<p>Good luck!</p>
+	<form>
+		<p ng-repeat="question in questions | limitTo: 5">
+			<label ng-bind="question.question"></label>
+			<br>
+			<input type="radio" value='fake2' name="{{question.fake2}}" ng-bind='question.fake2'> {{question.fake2}}
+			<br>
+			<input type="radio" value='answer' name="{{question.answer}}" ng-bind="question.answer"> {{question.answer}}
+			<br>
+			<input type="radio" value="fake1" name="{{question.fake1}}" ng-bind="question.fake1"> {{question.fake1}}
+			<hr>
+		</p>
+	</form>
+	<br>
+	<br>
+	<a href="#/main"><button class="btn">Cancel</button></a>
+	<input type='submit' ng-click="submitAnswer()" class="btn btn-success" value="Submit">
+</div>

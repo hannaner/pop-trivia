@@ -1,0 +1,28 @@
+<div>
+	<div class="pull-left">
+		<a href="#/main">Home</a> | <a href="#/new_question">Add a Question</a>
+	</div>
+	<div class="pull-right">
+		<a href="/">Logout</a>
+	</div>	
+	<br>
+	<br>
+	<h1>New Question</h1>
+	<label for="question">Question:</label>
+	<textarea style="vertical-align: top" ng-model="new_question.question" cols="70" rows="5"></textarea>
+	<br>
+	<br>
+	<label for="answer">Correct Answer:</label>
+	<input type="text" ng-model="new_question.answer">
+	<br>
+	<label for="fake1">Fake Answer 1:</label>
+	<input type='text' ng-model='new_question.fake1'>
+	<br>
+	<label for="fake2">Fake Answer 2:</label>
+	<input type="text" ng-model='new_question.fake2'>
+	<br>
+	<br>
+	<br>
+	<a href="#/main"><button class="btn">Cancel</button></a>
+	<input type='submit' ng-click="addQuestion()" class="btn btn-success" value="Add Question">
+</div>
